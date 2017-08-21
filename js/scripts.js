@@ -12,7 +12,10 @@ $(document).ready(function() {
       if ($(this).parent().hasClass("completed")) {
         $(this).parent().removeClass("completed");
       } else {
-        $(this).parent().addClass("completed");  
+        $(this).parent().addClass("completed");
+        if ($("li").not(".completed").length === 0) {
+          $(".list").empty();
+        }
       }
     });
   });
